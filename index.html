@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="ReBorn – Your personal life reset and self-improvement platform. Build habits, track wellness, study smarter, and journal your growth journey." />
+  <meta name="theme-color" content="#A78BFA" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta property="og:title" content="ReBorn – Reset. Rebuild. Rise." />
+  <meta property="og:description" content="Your personal life reset and self-improvement companion for young adults." />
+  <title>ReBorn – Reset. Rebuild. Rise.</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/design-system.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pages.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--  App Shell                                              -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div id="app">
+
+  <!-- ── Bottom Navigation ────────────────────────────────── -->
+  <nav class="bottom-nav hidden" id="bottom-nav" role="navigation" aria-label="Main navigation">
+    <button class="nav-item active" data-nav="home" id="nav-home" aria-label="Home">
+      <div class="nav-icon-wrap">
+        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+        </svg>
+      </div>
+      <span class="nav-label">Home</span>
+    </button>
+
+    <button class="nav-item" data-nav="missions" id="nav-missions" aria-label="Missions">
+      <div class="nav-icon-wrap">
+        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+        </svg>
+      </div>
+      <span class="nav-label">Missions</span>
+      <div class="nav-pip"></div>
+    </button>
+
+    <button class="nav-item" data-nav="study" id="nav-study" aria-label="Study">
+      <div class="nav-icon-wrap">
+        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+        </svg>
+      </div>
+      <span class="nav-label">Study</span>
+    </button>
+
+    <button class="nav-item" data-nav="wellness" id="nav-wellness" aria-label="Wellness">
+      <div class="nav-icon-wrap">
+        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+        </svg>
+      </div>
+      <span class="nav-label">Wellness</span>
+    </button>
+
+    <button class="nav-item" data-nav="profile" id="nav-profile" aria-label="Profile">
+      <div class="nav-icon-wrap">
+        <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+        </svg>
+      </div>
+      <span class="nav-label">Profile</span>
+    </button>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: SPLASH                                        -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-splash" class="page active" role="main" aria-label="Welcome">
+    <!-- Background Orbs -->
+    <div class="orb orb-purple splash-bg-orb1 float-slow" style="opacity:0.4"></div>
+    <div class="orb orb-sky splash-bg-orb2 float-slow float-delay1" style="opacity:0.5"></div>
+    <div class="orb orb-accent splash-bg-orb3 float-slow float-delay2" style="opacity:0.3"></div>
+
+    <!-- Floating Particles -->
+    <div class="splash-particle" style="width:6px;height:6px;top:25%;left:15%;animation:float 3s 0.2s infinite"></div>
+    <div class="splash-particle" style="width:10px;height:10px;top:60%;right:20%;animation:float 4.5s 0.7s infinite"></div>
+    <div class="splash-particle" style="width:8px;height:8px;top:75%;left:40%;animation:float 3.8s 1.3s infinite"></div>
+    <div class="splash-particle" style="width:5px;height:5px;top:30%;right:35%;animation:float 5s 0.5s infinite"></div>
+
+    <div class="splash-content">
+      <!-- Logo -->
+      <div class="splash-logo-wrap">
+        <div class="splash-logo-ring float-anim">
+          <div class="splash-logo-inner">
+            <span class="splash-logo-emoji">🌅</span>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="splash-tagline">Reset.<br>Rebuild.<br>Rise.</h1>
+      <p class="splash-sub">Your personal transformation starts with a single intentional day.</p>
+
+      <div class="splash-actions">
+        <button class="btn-splash-primary" onclick="navigate('signup')" id="splash-begin-btn">
+          Begin Your Journey ✨
+        </button>
+        <button class="btn-splash-secondary" onclick="navigate('login')" id="splash-login-btn">
+          I already have an account
+        </button>
+        <button class="btn-splash-secondary" onclick="navigate('dashboard')"
+                id="splash-skip" style="opacity:0; transition: opacity 0.5s; font-size:0.85rem; padding: 0.75rem 2rem;">
+          Skip for now →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: LOGIN                                         -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-login" class="page auth-page" role="main" aria-label="Login">
+    <!-- Hero Header -->
+    <div class="auth-header-wave">
+      <div class="auth-logo">🌅</div>
+      <h1 class="auth-headline">Welcome Back</h1>
+      <svg class="auth-wave-svg" viewBox="0 0 480 60" preserveAspectRatio="none">
+        <path d="M0,30 C80,60 160,0 240,30 C320,60 400,0 480,30 L480,60 L0,60 Z" fill="#FAFAF8"/>
+      </svg>
+    </div>
+
+    <!-- Form Body -->
+    <div class="auth-body">
+      <!-- Social Login -->
+      <button class="social-btn" id="google-login-btn" onclick="showToast('Google login coming soon!')">
+        <svg class="social-icon" viewBox="0 0 24 24">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Continue with Google
+      </button>
+
+      <div class="divider">or</div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <label class="input-label" for="login-email">Email Address</label>
+        <div class="input-icon-wrap">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+          </svg>
+          <input id="login-email" type="email" class="input-field" placeholder="you@example.com" autocomplete="email" />
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <label class="input-label" for="login-password">Password</label>
+        <div class="input-icon-wrap">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+          </svg>
+          <input id="login-password" type="password" class="input-field input-field-icon-right" placeholder="••••••••" autocomplete="current-password" />
+          <svg class="input-eye" onclick="togglePassword('login-password', this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="forgot-link" onclick="showToast('Password reset email sent! 📧')">Forgot password?</div>
+      </div>
+
+      <button class="btn btn-primary btn-full btn-lg" id="login-btn"
+              onclick="navigate('dashboard'); showToast('Welcome back, Alex! 🌅')">
+        Sign In
+      </button>
+    </div>
+
+    <div class="auth-footer">
+      Don't have an account? <a onclick="navigate('signup')" id="login-to-signup">Sign up for free</a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: SIGNUP                                        -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-signup" class="page auth-page" role="main" aria-label="Sign Up">
+    <div class="auth-header-wave">
+      <div class="auth-logo">🌱</div>
+      <h1 class="auth-headline">Start Fresh Today</h1>
+      <svg class="auth-wave-svg" viewBox="0 0 480 60" preserveAspectRatio="none">
+        <path d="M0,30 C80,60 160,0 240,30 C320,60 400,0 480,30 L480,60 L0,60 Z" fill="#FAFAF8"/>
+      </svg>
+    </div>
+
+    <div class="auth-body">
+      <button class="social-btn" id="google-signup-btn" onclick="showToast('Google signup coming soon!')">
+        <svg class="social-icon" viewBox="0 0 24 24">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Continue with Google
+      </button>
+
+      <div class="divider">or create with email</div>
+
+      <div class="grid-2">
+        <div class="input-group">
+          <label class="input-label" for="signup-fname">First Name</label>
+          <input id="signup-fname" type="text" class="input-field" placeholder="Alex" autocomplete="given-name" />
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="signup-lname">Last Name</label>
+          <input id="signup-lname" type="text" class="input-field" placeholder="Kim" autocomplete="family-name" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="signup-email">Email Address</label>
+        <div class="input-icon-wrap">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+          </svg>
+          <input id="signup-email" type="email" class="input-field" placeholder="you@example.com" autocomplete="email" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label" for="signup-password">Password</label>
+        <div class="input-icon-wrap">
+          <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+          </svg>
+          <input id="signup-password" type="password" class="input-field input-field-icon-right" placeholder="Create a strong password" autocomplete="new-password" />
+          <svg class="input-eye" onclick="togglePassword('signup-password', this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Age range -->
+      <div class="input-group">
+        <label class="input-label" for="signup-age">Age Range</label>
+        <select id="signup-age" class="input-field">
+          <option value="">Select your age range</option>
+          <option value="18-20">18–20 years</option>
+          <option value="21-22">21–22 years</option>
+          <option value="23-25">23–25 years</option>
+          <option value="25+">25+ years</option>
+        </select>
+      </div>
+
+      <label class="check-wrap" id="terms-check-wrap">
+        <div class="check-box" id="terms-check" onclick="toggleTerms()"></div>
+        <span class="text-sm text-secondary">I agree to the <span style="color:var(--clr-primary-dk);font-weight:600;cursor:pointer">Terms of Service</span> and <span style="color:var(--clr-primary-dk);font-weight:600;cursor:pointer">Privacy Policy</span></span>
+      </label>
+
+      <button class="btn btn-primary btn-full btn-lg" id="signup-btn"
+              onclick="navigate('blueprint'); showToast('Account created! Let\'s set up your Blueprint 🎯')">
+        Create My Account 🌅
+      </button>
+    </div>
+
+    <div class="auth-footer">
+      Already have an account? <a onclick="navigate('login')" id="signup-to-login">Sign in</a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: BLUEPRINT (Onboarding)                        -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-blueprint" class="page" role="main" aria-label="Blueprint Setup">
+    <!-- Hero -->
+    <div class="blueprint-hero">
+      <div class="orb orb-purple" style="width:200px;height:200px;top:-60px;right:-40px;opacity:0.3"></div>
+      <div class="orb orb-sky" style="width:160px;height:160px;bottom:-40px;left:-30px;opacity:0.4"></div>
+      <h1 class="blueprint-hero-title">Design Your Blueprint</h1>
+      <p class="blueprint-hero-sub">Tell us about yourself so we can personalize your experience</p>
+    </div>
+
+    <div class="blueprint-body">
+      <!-- Step indicators -->
+      <div class="step-indicator">
+        <div class="step-dot active" data-step="1"></div>
+        <div class="step-dot" data-step="2"></div>
+        <div class="step-dot" data-step="3"></div>
+      </div>
+
+      <!-- Step 1: Goals -->
+      <div class="blueprint-step active" id="bp-step-1">
+        <h2 class="text-xl fw-700 mb-2">What are your goals?</h2>
+        <p class="text-sm text-secondary mb-6">Choose all that apply. You can change these later.</p>
+        <div id="goals-list">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- Step 2: Current vibe -->
+      <div class="blueprint-step" id="bp-step-2">
+        <h2 class="text-xl fw-700 mb-2">Where are you now? 🤔</h2>
+        <p class="text-sm text-secondary mb-6">Be honest — this is your safe space.</p>
+
+        <div class="card mb-4">
+          <div class="input-group">
+            <label class="input-label" for="bp-situation">Describe your current situation</label>
+            <textarea id="bp-situation" class="input-field" placeholder="e.g. I've been feeling stuck lately, procrastinating on my studies and not taking care of myself…" style="min-height:100px"></textarea>
+          </div>
+        </div>
+
+        <p class="text-sm fw-600 mb-3 text-secondary">What's your biggest challenge right now?</p>
+        <div class="chip-group" id="challenge-chips">
+          <span class="chip" onclick="this.classList.toggle('active')">😴 Low energy</span>
+          <span class="chip" onclick="this.classList.toggle('active')">📱 Distraction</span>
+          <span class="chip" onclick="this.classList.toggle('active')">😰 Anxiety</span>
+          <span class="chip" onclick="this.classList.toggle('active')">🎯 No direction</span>
+          <span class="chip" onclick="this.classList.toggle('active')">⏰ Time management</span>
+          <span class="chip" onclick="this.classList.toggle('active')">💸 Finances</span>
+          <span class="chip" onclick="this.classList.toggle('active')">🤝 Relationships</span>
+          <span class="chip" onclick="this.classList.toggle('active')">💪 Fitness</span>
+        </div>
+      </div>
+
+      <!-- Step 3: Commitment -->
+      <div class="blueprint-step" id="bp-step-3">
+        <h2 class="text-xl fw-700 mb-2">Your daily commitment ⏰</h2>
+        <p class="text-sm text-secondary mb-6">How much time can you give ReBorn each day?</p>
+
+        <div style="display:flex;flex-direction:column;gap:var(--sp-3);" id="time-options">
+          <div class="goal-option selected" data-time="15" onclick="selectTime(this)">
+            <span class="goal-icon">⚡</span>
+            <div class="goal-text">
+              <div class="goal-name">15 minutes</div>
+              <div class="goal-desc">Quick daily check-in & habits</div>
+            </div>
+            <div class="goal-check">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" width="10" height="10"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            </div>
+          </div>
+          <div class="goal-option" data-time="30" onclick="selectTime(this)">
+            <span class="goal-icon">🌟</span>
+            <div class="goal-text">
+              <div class="goal-name">30 minutes</div>
+              <div class="goal-desc">Balanced wellness & study sessions</div>
+            </div>
+            <div class="goal-check"></div>
+          </div>
+          <div class="goal-option" data-time="60" onclick="selectTime(this)">
+            <span class="goal-icon">🚀</span>
+            <div class="goal-text">
+              <div class="goal-name">1 hour+</div>
+              <div class="goal-desc">Deep transformation mode</div>
+            </div>
+            <div class="goal-check"></div>
+          </div>
+        </div>
+
+        <div class="card mt-6" style="background:linear-gradient(135deg,rgba(167,139,250,0.08),rgba(207,232,255,0.06))">
+          <p class="text-sm fw-600 mb-3">🔔 Preferred reminder time</p>
+          <input type="time" class="input-field" id="bp-reminder" value="07:30" />
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="flex-between mt-8">
+        <button class="btn btn-secondary" id="bp-back-btn" onclick="blueprintBack()">← Back</button>
+        <button class="btn btn-primary" id="bp-next-btn" onclick="blueprintNext()">
+          Continue →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: DASHBOARD                                     -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-dashboard" class="page" role="main" aria-label="Dashboard">
+    <!-- Hero -->
+    <div class="dashboard-hero">
+      <div class="orb orb-purple" style="width:180px;height:180px;top:-50px;right:-30px;opacity:0.25"></div>
+      <div class="orb orb-sky" style="width:120px;height:120px;bottom:20px;left:-20px;opacity:0.3"></div>
+
+      <div class="flex-between">
+        <div>
+          <p class="dash-greeting">Good morning ☀️</p>
+          <h1 class="dash-name">Hey, Alex 👋</h1>
+        </div>
+        <div class="avatar avatar-md avatar-initials" onclick="navigate('profile')" style="cursor:pointer">AK</div>
+      </div>
+
+      <!-- XP strip -->
+      <div class="dash-hero-card mt-5">
+        <div class="flex-between mb-2">
+          <div class="flex" style="gap:var(--sp-2);align-items:center">
+            <span class="level-badge">LVL 5</span>
+            <span class="text-xs fw-600" style="color:rgba(255,255,255,0.9)">Awakening Soul</span>
+          </div>
+          <div class="streak-display">
+            <span class="streak-flame">🔥</span>
+            <span class="streak-count" style="color:white;font-size:var(--fs-lg)">7</span>
+            <span class="streak-label" style="color:rgba(255,255,255,0.75)">day streak</span>
+          </div>
+        </div>
+        <div class="xp-bar-wrap" style="background:rgba(255,255,255,0.25);height:8px;margin-bottom:var(--sp-1)">
+          <div class="xp-bar-fill" id="dash-xp-fill" style="width:78%"></div>
+        </div>
+        <div class="flex-between">
+          <span class="text-xs fw-500" style="color:rgba(255,255,255,0.75)" id="dash-xp-label">2,340 / 3,000 XP</span>
+          <span class="text-xs fw-600" style="color:rgba(255,255,255,0.9)">78% to LVL 6</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="dashboard-body page-content" style="padding-top:var(--sp-6)">
+
+      <!-- Quick Stats -->
+      <div class="quick-stats mb-6">
+        <div class="quick-stat">
+          <div class="quick-stat-value">12</div>
+          <div class="quick-stat-label">Missions</div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-value">7.5h</div>
+          <div class="quick-stat-label">Sleep</div>
+        </div>
+        <div class="quick-stat">
+          <div class="quick-stat-value">87%</div>
+          <div class="quick-stat-label">Score</div>
+        </div>
+      </div>
+
+      <!-- Today's Quote -->
+      <div class="card mb-6" style="background:linear-gradient(135deg,rgba(167,139,250,0.07),rgba(207,232,255,0.05))">
+        <p class="text-xs fw-600 text-muted tracking-wide uppercase mb-2">Daily Inspiration ✨</p>
+        <blockquote class="quote-block">
+          "The secret of getting ahead is getting started. Start with small steps and build momentum."
+        </blockquote>
+        <p class="text-xs text-muted mt-2 fw-500">— Mark Twain</p>
+      </div>
+
+      <!-- Active Missions -->
+      <div class="section-header">
+        <h2 class="section-title">Active Missions</h2>
+        <span class="section-action" onclick="navigate('missions')">See all →</span>
+      </div>
+      <div class="missions-scroll mb-6" id="dash-missions-scroll">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Today's Check-in -->
+      <div class="section-header">
+        <h2 class="section-title">Today's Check-in</h2>
+      </div>
+      <div class="grid-2 mb-6">
+        <!-- Journal card -->
+        <div class="card" onclick="navigate('journal')" style="cursor:pointer;border-left:3px solid var(--clr-primary)">
+          <div style="font-size:1.8rem;margin-bottom:var(--sp-2)">📝</div>
+          <div class="text-sm fw-700">Journal</div>
+          <div class="text-xs text-muted mt-1">Reflect on your day</div>
+        </div>
+        <!-- Wellness card -->
+        <div class="card" onclick="navigate('health')" style="cursor:pointer;border-left:3px solid var(--clr-health-dk)">
+          <div style="font-size:1.8rem;margin-bottom:var(--sp-2)">💚</div>
+          <div class="text-sm fw-700">Wellness</div>
+          <div class="text-xs text-muted mt-1">5/8 habits done</div>
+        </div>
+      </div>
+
+      <!-- Study Progress -->
+      <div class="section-header">
+        <h2 class="section-title">Study Progress</h2>
+        <span class="section-action" onclick="navigate('study')">Open →</span>
+      </div>
+      <div class="card mb-6">
+        <div class="flex-between mb-3">
+          <div>
+            <div class="text-sm fw-700">Today's Focus</div>
+            <div class="text-xs text-muted">2h 15m studied</div>
+          </div>
+          <span class="badge badge-health">On Track 🎯</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill progress-bar-fill--health" style="width:65%"></div>
+        </div>
+        <div class="text-xs text-muted mt-2">65% of daily target (3.5h)</div>
+      </div>
+
+      <!-- Weekly mood -->
+      <div class="section-header">
+        <h2 class="section-title">Week at a Glance</h2>
+      </div>
+      <div class="card mb-6">
+        <div class="flex" style="justify-content:space-between;align-items:flex-end;gap:4px">
+          <!-- Mini bar chart -->
+          <div style="text-align:center;flex:1" title="Monday">
+            <div style="background:var(--clr-primary-lt);border-radius:4px 4px 0 0;height:40px;margin-bottom:4px"></div>
+            <div class="text-xs text-muted">M</div>
+          </div>
+          <div style="text-align:center;flex:1" title="Tuesday">
+            <div style="background:var(--clr-primary);border-radius:4px 4px 0 0;height:60px;margin-bottom:4px"></div>
+            <div class="text-xs text-muted">T</div>
+          </div>
+          <div style="text-align:center;flex:1" title="Wednesday">
+            <div style="background:var(--clr-primary-lt);border-radius:4px 4px 0 0;height:50px;margin-bottom:4px"></div>
+            <div class="text-xs text-muted">W</div>
+          </div>
+          <div style="text-align:center;flex:1" title="Thursday">
+            <div style="background:var(--clr-primary);border-radius:4px 4px 0 0;height:70px;margin-bottom:4px"></div>
+            <div class="text-xs text-muted">T</div>
+          </div>
+          <div style="text-align:center;flex:1" title="Friday">
+            <div style="background:var(--clr-accent);border-radius:4px 4px 0 0;height:45px;margin-bottom:4px"></div>
+            <div class="text-xs text-muted">F</div>
+          </div>
+          <div style="text-align:center;flex:1" title="Saturday">
+            <div style="background:var(--clr-health-dk);border-radius:4px 4px 0 0;height:55px;margin-bottom:4px"></div>
+            <div class="text-xs text-muted">S</div>
+          </div>
+          <div style="text-align:center;flex:1" title="Sunday - Today">
+            <div style="background:var(--grad-sunrise);border-radius:4px 4px 0 0;height:38px;margin-bottom:4px;position:relative">
+              <div class="nav-pip" style="top:-4px;right:-4px"></div>
+            </div>
+            <div class="text-xs fw-700" style="color:var(--clr-primary-dk)">S</div>
+          </div>
+        </div>
+        <div class="text-xs text-muted mt-3">Average daily score: <span class="fw-700 text-primary">87 pts</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: MISSIONS                                      -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-missions" class="page" role="main" aria-label="Missions">
+    <!-- Header -->
+    <div style="background:linear-gradient(135deg,#FDBA74 0%,#A78BFA 100%);padding:var(--sp-8) var(--page-pad) var(--sp-6);position:relative;overflow:hidden">
+      <div class="orb orb-purple" style="width:150px;height:150px;top:-40px;right:-20px;opacity:0.3"></div>
+      <h1 class="text-2xl fw-700" style="font-family:var(--font-serif);color:white;margin-bottom:var(--sp-1)">Daily Missions</h1>
+      <p class="text-sm" style="color:rgba(255,255,255,0.8)">Complete missions to earn XP and level up 🎮</p>
+
+      <!-- Progress summary -->
+      <div class="dash-hero-card mt-4">
+        <div class="flex-between mb-2">
+          <span class="text-xs fw-600" style="color:rgba(255,255,255,0.9)">Today's Progress</span>
+          <span class="text-xs fw-700" style="color:white">2 / 5 done</span>
+        </div>
+        <div class="xp-bar-wrap" style="background:rgba(255,255,255,0.25);height:8px">
+          <div class="xp-bar-fill" style="width:40%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <!-- Tab bar -->
+      <div class="tab-bar mb-5">
+        <button class="tab-item active" id="missions-tab-all" onclick="filterMissions('all', this)">All</button>
+        <button class="tab-item" id="missions-tab-health" onclick="filterMissions('health', this)">Health</button>
+        <button class="tab-item" id="missions-tab-study" onclick="filterMissions('study', this)">Study</button>
+        <button class="tab-item" id="missions-tab-journal" onclick="filterMissions('journal', this)">Journal</button>
+      </div>
+
+      <!-- Missions list -->
+      <div id="missions-list">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Bonus missions -->
+      <div class="section-header mt-6">
+        <h2 class="section-title">Bonus Challenges 🏆</h2>
+      </div>
+      <div class="card" style="background:linear-gradient(135deg,rgba(253,186,116,0.12),rgba(167,139,250,0.08))">
+        <div class="flex" style="gap:var(--sp-3);align-items:center">
+          <div style="font-size:2rem">🏆</div>
+          <div style="flex:1">
+            <div class="text-sm fw-700">Weekend Warrior</div>
+            <div class="text-xs text-muted">Complete all missions on Sat & Sun</div>
+            <div class="progress-bar-wrap mt-2" style="width:100%">
+              <div class="progress-bar-fill progress-bar-fill--accent" style="width:50%"></div>
+            </div>
+          </div>
+          <span class="badge badge-accent">+200 XP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: JOURNAL                                       -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-journal" class="page" role="main" aria-label="Journal">
+    <!-- Header -->
+    <div class="journal-hero">
+      <div class="orb orb-purple" style="width:140px;height:140px;top:-30px;right:-20px;opacity:0.4"></div>
+
+      <div class="journal-date-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="12" height="12">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+        </svg>
+        Friday, July 11 · 2026
+      </div>
+      <h1 class="journal-headline">My Journal</h1>
+      <p class="journal-sub">A space to reflect, dream, and grow ✨</p>
+    </div>
+
+    <div class="page-content">
+      <!-- Mood check-in -->
+      <div class="mood-card">
+        <p class="text-sm fw-600 mb-3">How are you feeling today?</p>
+        <div class="mood-bar" id="mood-selector">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- New entry -->
+      <div class="section-header">
+        <h2 class="section-title">New Entry</h2>
+      </div>
+      <div class="card mb-5">
+        <div class="input-group mb-3">
+          <textarea id="journal-new-text" class="input-field" placeholder="What's on your mind today? Write freely…" style="min-height:140px;border:none;padding:0;resize:none;font-size:var(--fs-base);line-height:1.7" onblur="this.style.boxShadow='none'"></textarea>
+        </div>
+
+        <!-- Writing prompts -->
+        <p class="text-xs fw-600 text-muted mb-2 tracking-wide uppercase">Prompts</p>
+        <div style="display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-4)">
+          <span class="prompt-chip" onclick="setPrompt(this)">💡 What am I grateful for?</span>
+          <span class="prompt-chip" onclick="setPrompt(this)">🎯 My goal for tomorrow?</span>
+          <span class="prompt-chip" onclick="setPrompt(this)">😤 What challenged me today?</span>
+          <span class="prompt-chip" onclick="setPrompt(this)">🌟 A win I celebrated?</span>
+        </div>
+
+        <div class="flex-between">
+          <div class="flex" style="gap:var(--sp-2)">
+            <button class="btn btn-ghost btn-sm" onclick="showToast('Photo upload coming soon! 📸')">📷 Photo</button>
+            <button class="btn btn-ghost btn-sm" onclick="showToast('Voice note coming soon! 🎙️')">🎙️ Voice</button>
+          </div>
+          <button class="btn btn-primary btn-sm" id="save-entry-btn" onclick="saveJournalEntry()">Save Entry</button>
+        </div>
+      </div>
+
+      <!-- Past Entries -->
+      <div class="section-header">
+        <h2 class="section-title">Past Entries</h2>
+        <span class="section-action">View all →</span>
+      </div>
+      <div id="journal-entries">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: STUDY                                         -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-study" class="page" role="main" aria-label="Study">
+    <div class="study-hero">
+      <div class="orb orb-sky" style="width:150px;height:150px;top:-30px;right:-20px;opacity:0.5"></div>
+      <h1 class="study-headline">Study Hub 📚</h1>
+      <p class="study-sub">Focus, learn, and level up your knowledge</p>
+    </div>
+
+    <div class="page-content">
+      <!-- Pomodoro Timer -->
+      <div class="pomodoro-card">
+        <div class="pomodoro-phase-label" id="pomodoro-phase-label">FOCUS TIME</div>
+
+        <!-- Ring -->
+        <div class="pomodoro-ring-wrap">
+          <svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="90" cy="90" r="80" fill="none" stroke="#EDE9F6" stroke-width="10"/>
+            <circle id="pomodoro-ring-fill" cx="90" cy="90" r="80" fill="none"
+                    stroke="url(#pomGrad)" stroke-width="10"
+                    stroke-linecap="round"
+                    stroke-dasharray="502.65"
+                    stroke-dashoffset="502.65"
+                    transform="rotate(-90 90 90)"
+                    style="transition: stroke-dashoffset 1s linear"/>
+            <defs>
+              <linearGradient id="pomGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#A78BFA"/>
+                <stop offset="100%" style="stop-color:#CFE8FF"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="pomodoro-time-center">
+            <div class="pomodoro-timer" id="pomodoro-timer">25:00</div>
+            <div class="pomodoro-phase" id="pomodoro-phase-sub">Focus</div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="pomodoro-controls">
+          <button class="btn btn-secondary btn-icon" onclick="resetPomodoro()" id="pomodoro-reset-btn" title="Reset">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/>
+            </svg>
+          </button>
+          <button class="btn btn-primary" style="width:64px;height:64px;border-radius:50%;padding:0;font-size:1.5rem"
+                  onclick="togglePomodoro()" id="pomodoro-play-btn" title="Play/Pause">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button class="btn btn-secondary btn-icon" onclick="showToast('Skip to next phase ⏭️'); pomodoroPhaseComplete()" title="Skip">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954L4.683 17.789A1.125 1.125 0 013 16.811V8.69zM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954l-7.108 4.061A1.125 1.125 0 0112.75 16.811V8.69z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Session count -->
+        <p class="text-sm text-muted mt-4">🍅 Sessions today: <span class="fw-700" id="pomodoro-sessions">0</span></p>
+      </div>
+
+      <!-- Study modes -->
+      <div class="section-header">
+        <h2 class="section-title">Study Modes</h2>
+      </div>
+      <div class="grid-2 mb-5">
+        <div class="card" style="cursor:pointer;border-top:3px solid var(--clr-primary)" onclick="showToast('Flashcards coming soon! 🃏')">
+          <div style="font-size:1.5rem;margin-bottom:var(--sp-2)">🃏</div>
+          <div class="text-sm fw-700">Flashcards</div>
+          <div class="text-xs text-muted mt-1">Spaced repetition</div>
+        </div>
+        <div class="card" style="cursor:pointer;border-top:3px solid var(--clr-accent)" onclick="showToast('Quiz mode coming soon! 🧩')">
+          <div style="font-size:1.5rem;margin-bottom:var(--sp-2)">🧩</div>
+          <div class="text-sm fw-700">Quick Quiz</div>
+          <div class="text-xs text-muted mt-1">Test yourself</div>
+        </div>
+        <div class="card" style="cursor:pointer;border-top:3px solid var(--clr-health-dk)" onclick="showToast('Mind maps coming soon! 🗺️')">
+          <div style="font-size:1.5rem;margin-bottom:var(--sp-2)">🗺️</div>
+          <div class="text-sm fw-700">Mind Map</div>
+          <div class="text-xs text-muted mt-1">Visual learning</div>
+        </div>
+        <div class="card" style="cursor:pointer;border-top:3px solid var(--clr-secondary)" onclick="showToast('Notes coming soon! 📝')">
+          <div style="font-size:1.5rem;margin-bottom:var(--sp-2)">📝</div>
+          <div class="text-sm fw-700">Notes</div>
+          <div class="text-xs text-muted mt-1">Smart summaries</div>
+        </div>
+      </div>
+
+      <!-- Subjects -->
+      <div class="section-header">
+        <h2 class="section-title">My Subjects</h2>
+        <button class="btn btn-ghost btn-sm" onclick="showToast('Add subject coming soon!')">+ Add</button>
+      </div>
+      <div id="subjects-list">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: HEALTH / WELLNESS                             -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-health" class="page" role="main" aria-label="Health and Wellness">
+    <div class="health-hero">
+      <div class="orb" style="width:160px;height:160px;top:-40px;right:-30px;background:radial-gradient(circle,rgba(190,239,216,0.5),transparent 70%);opacity:0.8"></div>
+      <h1 class="health-headline">Wellness 💚</h1>
+      <p class="health-sub">Mind, body, and soul in balance</p>
+    </div>
+
+    <div class="page-content">
+      <!-- Health Rings -->
+      <div class="section-header">
+        <h2 class="section-title">Today's Activity</h2>
+      </div>
+      <div class="health-rings-row mb-5">
+        <!-- Steps -->
+        <div class="health-ring-item">
+          <div style="position:relative;width:88px;height:88px;margin:0 auto">
+            <svg width="88" height="88" viewBox="0 0 88 88" id="steps-ring"></svg>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center">
+              <div class="text-xs fw-800" id="steps-val">7,842</div>
+            </div>
+          </div>
+          <div class="health-ring-label">Steps</div>
+        </div>
+        <!-- Sleep -->
+        <div class="health-ring-item">
+          <div style="position:relative;width:88px;height:88px;margin:0 auto">
+            <svg width="88" height="88" viewBox="0 0 88 88" id="sleep-ring"></svg>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center">
+              <div class="text-xs fw-800" id="sleep-val">7.5h</div>
+            </div>
+          </div>
+          <div class="health-ring-label">Sleep</div>
+        </div>
+        <!-- Active -->
+        <div class="health-ring-item">
+          <div style="position:relative;width:88px;height:88px;margin:0 auto">
+            <svg width="88" height="88" viewBox="0 0 88 88" id="active-ring"></svg>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center">
+              <div class="text-xs fw-800" id="active-val">38m</div>
+            </div>
+          </div>
+          <div class="health-ring-label">Active</div>
+        </div>
+      </div>
+
+      <!-- Water Intake -->
+      <div class="section-header">
+        <h2 class="section-title">💧 Water Intake</h2>
+      </div>
+      <div class="card mb-5">
+        <div class="flex-between mb-3">
+          <div>
+            <span class="text-xl fw-800">5</span>
+            <span class="text-sm text-muted fw-500"> / 8 glasses</span>
+          </div>
+          <span class="badge badge-health">62% 👍</span>
+        </div>
+        <div class="water-tracker" id="water-tracker">
+          <!-- Rendered by JS -->
+        </div>
+        <div class="text-xs text-muted mt-3">Tap a drop to log your water intake</div>
+      </div>
+
+      <!-- Habits -->
+      <div class="section-header">
+        <h2 class="section-title">Today's Habits</h2>
+        <button class="btn btn-ghost btn-sm" onclick="showToast('Add habit coming soon!')">+ Add</button>
+      </div>
+      <div id="habits-list">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Mood Tracker -->
+      <div class="section-header mt-2">
+        <h2 class="section-title">Mental Wellness</h2>
+      </div>
+      <div class="card mb-5">
+        <div class="flex-between mb-3">
+          <div class="text-sm fw-700">Stress Level</div>
+          <span class="badge badge-primary">Moderate</span>
+        </div>
+        <div class="progress-bar-wrap mb-3">
+          <div class="progress-bar-fill" style="width:45%;background:linear-gradient(90deg,#34D399,#FDBA74)"></div>
+        </div>
+        <div class="grid-2" style="gap:var(--sp-3)">
+          <div class="card" style="padding:var(--sp-3);text-align:center;cursor:pointer" onclick="showToast('Breathing exercise started! 🌬️')">
+            <div style="font-size:1.5rem;margin-bottom:4px">🌬️</div>
+            <div class="text-xs fw-600">Breathe</div>
+          </div>
+          <div class="card" style="padding:var(--sp-3);text-align:center;cursor:pointer" onclick="showToast('Meditation starting! 🧘')">
+            <div style="font-size:1.5rem;margin-bottom:4px">🧘</div>
+            <div class="text-xs fw-600">Meditate</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════ -->
+  <!--  PAGE: PROFILE                                       -->
+  <!-- ════════════════════════════════════════════════════ -->
+  <section id="page-profile" class="page" role="main" aria-label="Profile">
+    <!-- Hero -->
+    <div class="profile-hero">
+      <div class="orb orb-purple" style="width:180px;height:180px;top:-50px;right:-30px;opacity:0.3"></div>
+      <div class="orb orb-sky" style="width:120px;height:120px;bottom:0;left:-20px;opacity:0.4"></div>
+
+      <div class="profile-avatar-wrap">
+        <div class="profile-avatar">🧑</div>
+        <div class="profile-edit-btn" onclick="showToast('Edit avatar coming soon!')">✏️</div>
+      </div>
+      <h1 class="profile-name">Alex Kim</h1>
+      <p class="profile-title">Awakening Soul · Level 5</p>
+
+      <!-- XP bar -->
+      <div class="dash-hero-card mt-4">
+        <div class="flex-between mb-2">
+          <span class="level-badge" id="profile-level-badge">LVL 5</span>
+          <span class="text-xs fw-600" style="color:rgba(255,255,255,0.9)" id="profile-xp">2,340 XP</span>
+        </div>
+        <div class="xp-bar-wrap" style="background:rgba(255,255,255,0.25);height:6px">
+          <div class="xp-bar-fill" id="profile-xp-fill" style="width:78%"></div>
+        </div>
+        <div class="text-xs mt-1" style="color:rgba(255,255,255,0.75)">660 XP to Level 6</div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="profile-body page-content" style="padding-top:var(--sp-5)">
+
+      <!-- Stats row -->
+      <div class="profile-stats-row mb-6">
+        <div class="stat-card">
+          <div class="stat-icon" style="background:rgba(167,139,250,0.15)">🔥</div>
+          <div class="stat-value">7</div>
+          <div class="stat-label">Day Streak</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="background:rgba(190,239,216,0.3)">🏆</div>
+          <div class="stat-value">24</div>
+          <div class="stat-label">Missions</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="background:rgba(253,186,116,0.2)">📝</div>
+          <div class="stat-value">18</div>
+          <div class="stat-label">Journals</div>
+        </div>
+      </div>
+
+      <!-- Achievements -->
+      <div class="section-header">
+        <h2 class="section-title">Achievements 🏅</h2>
+        <span class="section-action" onclick="showToast('All achievements coming soon!')">See all</span>
+      </div>
+      <div class="grid-3 mb-6">
+        <div class="achievement-card">
+          <div class="achievement-icon">🌅</div>
+          <div class="achievement-name">Early Bird</div>
+          <div class="achievement-desc">7am check-in ×7</div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🔥</div>
+          <div class="achievement-name">On Fire</div>
+          <div class="achievement-desc">7-day streak</div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🧠</div>
+          <div class="achievement-name">Deep Thinker</div>
+          <div class="achievement-desc">10 pomodoros</div>
+        </div>
+        <div class="achievement-card locked">
+          <div class="achievement-icon">💎</div>
+          <div class="achievement-name">Diamond</div>
+          <div class="achievement-desc">30-day streak</div>
+        </div>
+        <div class="achievement-card locked">
+          <div class="achievement-icon">🚀</div>
+          <div class="achievement-name">Rocket</div>
+          <div class="achievement-desc">Reach Level 10</div>
+        </div>
+        <div class="achievement-card locked">
+          <div class="achievement-icon">🌍</div>
+          <div class="achievement-name">World</div>
+          <div class="achievement-desc">100 missions</div>
+        </div>
+      </div>
+
+      <!-- Settings -->
+      <div class="section-header">
+        <h2 class="section-title">Settings</h2>
+      </div>
+      <div class="mb-2">
+        <div class="setting-row" onclick="showToast('Edit profile coming soon!')">
+          <div class="setting-icon-wrap" style="background:rgba(167,139,250,0.15)">👤</div>
+          <div class="setting-text">
+            <div class="setting-name">Edit Profile</div>
+            <div class="setting-desc">Name, photo, bio</div>
+          </div>
+          <span class="setting-arrow">›</span>
+        </div>
+        <div class="setting-row" onclick="showToast('Notifications settings coming soon!')">
+          <div class="setting-icon-wrap" style="background:rgba(253,186,116,0.2)">🔔</div>
+          <div class="setting-text">
+            <div class="setting-name">Notifications</div>
+            <div class="setting-desc">Reminders & alerts</div>
+          </div>
+          <div class="flex" style="align-items:center;gap:var(--sp-3)">
+            <label class="toggle">
+              <input type="checkbox" checked onchange="showToast(this.checked ? 'Notifications on 🔔' : 'Notifications off 🔕')">
+              <div class="toggle-track"></div>
+            </label>
+          </div>
+        </div>
+        <div class="setting-row" onclick="showToast('Privacy settings coming soon!')">
+          <div class="setting-icon-wrap" style="background:rgba(190,239,216,0.4)">🔒</div>
+          <div class="setting-text">
+            <div class="setting-name">Privacy</div>
+            <div class="setting-desc">Data & permissions</div>
+          </div>
+          <span class="setting-arrow">›</span>
+        </div>
+        <div class="setting-row" onclick="showToast('Theme settings coming soon!')">
+          <div class="setting-icon-wrap" style="background:rgba(207,232,255,0.6)">🎨</div>
+          <div class="setting-text">
+            <div class="setting-name">Appearance</div>
+            <div class="setting-desc">Dark mode & colors</div>
+          </div>
+          <span class="setting-arrow">›</span>
+        </div>
+        <div class="setting-row" onclick="showToast('Premium plan coming soon! 🌟')">
+          <div class="setting-icon-wrap" style="background:linear-gradient(135deg,rgba(167,139,250,0.2),rgba(253,186,116,0.2))">⭐</div>
+          <div class="setting-text">
+            <div class="setting-name">ReBorn Pro</div>
+            <div class="setting-desc">Unlock all features</div>
+          </div>
+          <span class="badge badge-accent">Upgrade</span>
+        </div>
+      </div>
+
+      <!-- Sign out -->
+      <button class="btn btn-secondary btn-full mt-4" id="signout-btn"
+              onclick="navigate('splash'); showToast('Signed out. See you tomorrow! 👋')">
+        Sign Out
+      </button>
+
+      <p class="text-xs text-center text-muted mt-4 mb-4">ReBorn v1.0.0 · Made with 💜</p>
+
+    </div>
+  </section>
+
+</div><!-- /app -->
+
+<!-- ── Inline helpers (pre-JS) ────────────────────────────── -->
+<script>
+  // Toggle password visibility
+  function togglePassword(inputId, icon) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+    const isHidden = input.type === 'password';
+    input.type = isHidden ? 'text' : 'password';
+    icon.style.color = isHidden ? 'var(--clr-primary)' : '';
+  }
+
+  // Toggle terms checkbox
+  function toggleTerms() {
+    const cb = document.getElementById('terms-check');
+    if (!cb) return;
+    cb.classList.toggle('checked');
+    const icon = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>';
+    cb.innerHTML = cb.classList.contains('checked') ? icon : '';
+  }
+
+  // Set journal prompt
+  function setPrompt(el) {
+    const input = document.getElementById('journal-new-text');
+    if (input) {
+      const text = el.textContent.replace(/^[^\s]+\s/, '');
+      input.value = text;
+      input.focus();
+    }
+  }
+
+  // Select time commitment in blueprint
+  function selectTime(el) {
+    document.querySelectorAll('#time-options .goal-option').forEach(opt => {
+      opt.classList.remove('selected');
+      const chk = opt.querySelector('.goal-check');
+      if (chk) chk.innerHTML = '';
+    });
+    el.classList.add('selected');
+    const chk = el.querySelector('.goal-check');
+    if (chk) chk.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" width="10" height="10"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>';
+  }
+
+  // Filter missions tab
+  function filterMissions(cat, tabEl) {
+    document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+    if (tabEl) tabEl.classList.add('active');
+    // Re-render with filter
+    const wrap = document.getElementById('missions-list');
+    if (!wrap || typeof state === 'undefined') return;
+    const filtered = cat === 'all' ? state.missions : state.missions.filter(m => m.cat === cat);
+    wrap.innerHTML = filtered.map(m => `
+      <div class="mission-card ${m.done ? 'completed' : ''}" onclick="completeMission(${m.id})">
+        <div class="mission-icon-box" style="background:${getMissionBg(m.cat)}">${m.emoji}</div>
+        <div class="mission-info">
+          <div class="mission-title">${m.title}</div>
+          <div class="mission-sub">${m.done ? 'Completed! 🎉' : m.progress + '% complete'}</div>
+          ${!m.done ? `<div class="progress-bar-wrap mt-2" style="width:100%"><div class="progress-bar-fill" style="width:${m.progress}%"></div></div>` : ''}
+        </div>
+        <span class="mission-xp">+${m.xp}XP</span>
+      </div>
+    `).join('') || '<p class="text-sm text-muted text-center" style="padding:2rem">No missions in this category yet!</p>';
+  }
+</script>
+
+<!-- ── App JS ──────────────────────────────────────────────── -->
+<script src="js/app.js"></script>
+
+<!-- ── Post-load init ─────────────────────────────────────── -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Render goals in blueprint
+    const goalsList = document.getElementById('goals-list');
+    if (goalsList && typeof state !== 'undefined') {
+      goalsList.innerHTML = state.goals.map(g => `
+        <div class="goal-option" data-goal="${g.id}" onclick="toggleGoal('${g.id}')">
+          <span class="goal-icon">${g.emoji}</span>
+          <div class="goal-text">
+            <div class="goal-name">${g.name}</div>
+            <div class="goal-desc">${g.desc}</div>
+          </div>
+          <div class="goal-check"></div>
+        </div>
+      `).join('');
+    }
+  });
+</script>
+
+</body>
+</html>
